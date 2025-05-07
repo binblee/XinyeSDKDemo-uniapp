@@ -1,0 +1,62 @@
+{
+    "name": "XYSDKUniPlugin",
+    "id": "xysdk",
+    "version": "1.6.1",
+    "description": "YinYe SDK",
+    "_dp_type": "nativeplugin",
+    "_dp_nativeplugin": {
+        "android": {
+            "plugins": [
+                {
+                    "type": "module",
+                    "name": "xysdk",
+                    "class": "com.example.xysdk.xysdk"
+                }
+            ],
+            "integrateType": "aar",
+            "permissions": [
+                "<uses-feature android:name=\"android.hardware.usb.host\" android:required=\"true\" />",
+                "<uses-permission android:name=\"android.permission.BLUETOOTH\" />",
+                "<uses-permission android:name=\"android.permission.BLUETOOTH_ADMIN\" />",
+                "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+                "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\" />",
+                "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\" />",
+                "<uses-permission android:name=\"android.hardware.usb.UsbAccessory\" />",
+                "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
+                "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>"
+            ],
+            "parameters": {
+                
+            }
+        },
+        "ios": {
+            "plugins": [
+                {
+                    "type": "module",
+                    "name": "xysdk",
+                    "class": "XYSDKModule"
+                }
+            ],
+            "integrateType": "framework",
+            "hooksClass": "",
+            "frameworks": [
+                "SystemConfiguration.framework",
+                "CFNetwork.framework",
+                "CoreBluetooth.framework"
+            ],
+            "embedFrameworks": [
+                
+            ],
+            "deploymentTarget": "9.0",
+            "validArchitectures": [
+                "arm64",
+                "armv7"
+            ],
+            "privacies": [
+                "NSBluetoothAlwaysUsageDescription"
+            ]
+        }
+    }
+}
