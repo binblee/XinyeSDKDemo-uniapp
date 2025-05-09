@@ -5,8 +5,8 @@ import { XYSDK } from '../XYSDK/XYSDK'
 import { pathToBase64 } from '../../js_sdk/mmmm-image-tools/index.js'
 
 
-const pageW = 70
-const pageH = 50
+const pageW = 50 // 50mm
+const pageH = 15 //15mm
 
 export class TSCPrintAction {
     printSimpleData() {
@@ -66,8 +66,8 @@ export class TSCPrintAction {
 		printData = byteMerger(printData, TSCCommandUtils.density(7))
         //设置方向
         printData = byteMerger(printData, TSCCommandUtils.direction(0))
-        //条码
-        printData = byteMerger(printData, TSCCommandUtils.barCode(10, 45, "128", 100, 1, 0, 2, 2, "abcdef12345"))
+        //条码, gussing 100px == 12mm
+        printData = byteMerger(printData, TSCCommandUtils.barCode(30, 20, "128", 50, 1, 0, 2, 2, "zy1234567890123"))
         // 打印一份
         printData = byteMerger(printData, TSCCommandUtils.printCount(1))
         return printData

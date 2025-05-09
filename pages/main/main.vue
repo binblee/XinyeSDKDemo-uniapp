@@ -37,7 +37,7 @@
 		<view class="print_content_view">
 			<p class="print_action_title">标签打印机</p>
 			<view class="print_action_view">
-				<button class="action_btn" hover-class="action_btn_hover" @click="goPrint('Label')">两寸三寸条码机</button>
+				<button class="action_btn" hover-class="action_btn_hover" @click="goPrint('Label')">两寸三寸条码机(条码)</button>
 			</view>
 		</view>
 		<view>
